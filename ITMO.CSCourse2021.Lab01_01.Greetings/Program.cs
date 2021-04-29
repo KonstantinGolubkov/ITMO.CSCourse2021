@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITMO.CSCourse2021.Lab01_01.Greetings
 {
-    class Greater
+    class Greeter
     {
         static void Main(string[] args)
         {
