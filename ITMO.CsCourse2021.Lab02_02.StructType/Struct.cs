@@ -23,7 +23,8 @@ namespace ITMO.CsCourse2021.Lab02_02.StructType
 
             goldAccount.accType = AccountType.Checking;
             goldAccount.accBal = (decimal)3200.00;
-            goldAccount.accNo = 123;
+            Console.Write("Enter account number: ");
+            goldAccount.accNo = long.Parse(Console.ReadLine());
 
             Console.WriteLine("*** Account Summary ***");
             Console.WriteLine("Acct Number {0}", goldAccount.accNo);
