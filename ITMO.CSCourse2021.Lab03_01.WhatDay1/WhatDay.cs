@@ -6,6 +6,22 @@ using System.Threading.Tasks;
 
 namespace ITMO.CSCourse2021.Lab03_01.WhatDay1
 {
+    enum MonthName
+    {
+        January,
+        February,
+        March,
+        April,
+        May,
+        June,
+        July,
+        August,
+        September,
+        October,
+        November,
+        December
+    }
+
     class WhatDay
     {
         static void Main(string[] args)
@@ -135,50 +151,56 @@ namespace ITMO.CSCourse2021.Lab03_01.WhatDay1
                 monthNum++;
             }
         End:
-            string stringMonthNum = monthNum.ToString();
-            switch (monthNum)
-            {
-                case 0:
-                    stringMonthNum = "January";
-                    break;
-                case 1:
-                    stringMonthNum = "February";
-                    break;
-                case 2:
-                    stringMonthNum = "March";
-                    break;
-                case 3:
-                    stringMonthNum = "April";
-                    break;
-                case 4:
-                    stringMonthNum = "May";
-                    break;
-                case 5:
-                    stringMonthNum = "June";
-                    break;
-                case 6:
-                    stringMonthNum = "July";
-                    break;
-                case 7:
-                    stringMonthNum = "August";
-                    break;
-                case 8:
-                    stringMonthNum = "September";
-                    break;
-                case 9:
-                    stringMonthNum = "October";
-                    break;
-                case 10:
-                    stringMonthNum = "November";
-                    break;
-                case 11:
-                    stringMonthNum = "December";
-                    break;
-                default:
-                    stringMonthNum = "not done yet";
-                    break;
-            }
-            Console.WriteLine("{0} {1}", dayNum, stringMonthNum);
+            MonthName temp = (MonthName)monthNum;
+            string monthName = temp.ToString();
+
+            Console.WriteLine("{0} {1}", dayNum, monthName);
+
+
+            //string stringMonthNum = monthNum.ToString();
+            //switch (monthNum)
+            //{
+            //    case 0:
+            //        stringMonthNum = "January";
+            //        break;
+            //    case 1:
+            //        stringMonthNum = "February";
+            //        break;
+            //    case 2:
+            //        stringMonthNum = "March";
+            //        break;
+            //    case 3:
+            //        stringMonthNum = "April";
+            //        break;
+            //    case 4:
+            //        stringMonthNum = "May";
+            //        break;
+            //    case 5:
+            //        stringMonthNum = "June";
+            //        break;
+            //    case 6:
+            //        stringMonthNum = "July";
+            //        break;
+            //    case 7:
+            //        stringMonthNum = "August";
+            //        break;
+            //    case 8:
+            //        stringMonthNum = "September";
+            //        break;
+            //    case 9:
+            //        stringMonthNum = "October";
+            //        break;
+            //    case 10:
+            //        stringMonthNum = "November";
+            //        break;
+            //    case 11:
+            //        stringMonthNum = "December";
+            //        break;
+            //    default:
+            //        stringMonthNum = "not done yet";
+            //        break;
+            //}
+            //Console.WriteLine("{0} {1}", dayNum, stringMonthNum);
         }
     }
 }
