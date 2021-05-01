@@ -179,11 +179,6 @@ namespace ITMO.CSCourse2021.Lab03_01.WhatDay1
                     break;
             }
             Console.WriteLine("{0} {1}", dayNum, stringMonthNum);
-
-            // Don't modify anything below here
-            // static System.Collections.ICollection DaysInMonths
-            // = new int[12] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
         }
     }
 }
