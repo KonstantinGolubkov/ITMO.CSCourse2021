@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITMO.CSCourse2021.Lab02_03.StructType_in_out
 {
-        public enum AccountType { Checking, Deposit }
+    public enum AccountType { Checking, Deposit }
 
     public struct BankAccount
     {
