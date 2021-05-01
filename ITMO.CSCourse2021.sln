@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab02_02.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab02_03.StructType_in_out", "ITMO.CSCourse2021.Lab02_03.StructType_in_out\ITMO.CSCourse2021.Lab02_03.StructType_in_out.csproj", "{48561621-1019-4CAC-A5FE-3003B0015775}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab03_01.WhatDay1", "ITMO.CSCourse2021.Lab03_01.WhatDay1\ITMO.CSCourse2021.Lab03_01.WhatDay1.csproj", "{5EEFF13C-D68A-4410-AFFE-E535E93B2027}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{48561621-1019-4CAC-A5FE-3003B0015775}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48561621-1019-4CAC-A5FE-3003B0015775}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48561621-1019-4CAC-A5FE-3003B0015775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EEFF13C-D68A-4410-AFFE-E535E93B2027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EEFF13C-D68A-4410-AFFE-E535E93B2027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EEFF13C-D68A-4410-AFFE-E535E93B2027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EEFF13C-D68A-4410-AFFE-E535E93B2027}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
