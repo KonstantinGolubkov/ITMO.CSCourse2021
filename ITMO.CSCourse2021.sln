@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab01_02.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab02_01.BankAccount", "ITMO.CSCourse2021.Lab02_01.BankAccount\ITMO.CSCourse2021.Lab02_01.BankAccount.csproj", "{25DC9B3E-66EF-463B-BE82-9CE4ED9A599C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CsCourse2021.Lab02_02.StructType", "ITMO.CsCourse2021.Lab02_02.StructType\ITMO.CsCourse2021.Lab02_02.StructType.csproj", "{71D5AB07-C9B9-4FD1-A6E8-B5EEA97F524E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{25DC9B3E-66EF-463B-BE82-9CE4ED9A599C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25DC9B3E-66EF-463B-BE82-9CE4ED9A599C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25DC9B3E-66EF-463B-BE82-9CE4ED9A599C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D5AB07-C9B9-4FD1-A6E8-B5EEA97F524E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D5AB07-C9B9-4FD1-A6E8-B5EEA97F524E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D5AB07-C9B9-4FD1-A6E8-B5EEA97F524E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D5AB07-C9B9-4FD1-A6E8-B5EEA97F524E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
