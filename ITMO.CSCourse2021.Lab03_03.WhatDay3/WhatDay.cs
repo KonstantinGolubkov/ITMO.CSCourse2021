@@ -56,16 +56,34 @@ namespace ITMO.CSCourse2021.Lab03_03.WhatDay3
 
                 int monthNum = 0;
 
-                foreach (int daysInMonth in DaysInMonths)
+                if (isLeapYear)
                 {
-                    if (dayNum <= daysInMonth)
+                    foreach (int daysInMonth in DaysInLeapMonths)
                     {
-                        break;
+                        if (dayNum <= daysInMonth)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            dayNum -= daysInMonth;
+                            monthNum++;
+                        }
                     }
-                    else
+                }
+                else
+                {
+                    foreach (int daysInMonth in DaysInMonths)
                     {
-                        dayNum -= daysInMonth;
-                        monthNum++;
+                        if (dayNum <= daysInMonth)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            dayNum -= daysInMonth;
+                            monthNum++;
+                        }
                     }
                 }
 
@@ -82,5 +100,9 @@ namespace ITMO.CSCourse2021.Lab03_03.WhatDay3
 
         static System.Collections.ICollection DaysInMonths = new int[12]
         { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+        static System.Collections.ICollection DaysInLeapMonths = new int[12] 
+        { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
     }
 }
