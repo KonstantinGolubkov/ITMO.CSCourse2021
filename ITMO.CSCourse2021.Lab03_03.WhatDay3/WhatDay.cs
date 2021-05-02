@@ -49,7 +49,7 @@ namespace ITMO.CSCourse2021.Lab03_03.WhatDay3
                 line = Console.ReadLine();
                 int dayNum = int.Parse(line);
 
-                if (dayNum < 1 || dayNum > 365)
+                if (dayNum < 1 || dayNum > maxDayNum)
                 {
                     throw new ArgumentOutOfRangeException("Day out of range");
                 }
