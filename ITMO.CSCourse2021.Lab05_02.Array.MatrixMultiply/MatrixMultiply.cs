@@ -10,8 +10,17 @@ namespace ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply
     {
         static void Output(int[,] result)
         {
-            Console.WriteLine("{0}   {1}", result[0, 0], result[0, 1]);
-            Console.WriteLine("{0}   {1}", result[1, 0], result[1, 1]);
+            //Console.WriteLine("{0}   {1}", result[0, 0], result[0, 1]);
+            //Console.WriteLine("{0}   {1}", result[1, 0], result[1, 1]);
+
+            for (int r = 0; r < 2; r++)
+            {
+                for (int c = 0; c < 2; c++)
+                {
+                    Console.Write("{0} ", result[r, c]);
+                }
+                Console.WriteLine();
+            }
         }
 
         static void Main(string[] args)
