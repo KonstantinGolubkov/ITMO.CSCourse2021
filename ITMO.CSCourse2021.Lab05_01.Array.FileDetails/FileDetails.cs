@@ -19,22 +19,25 @@ namespace ITMO.CSCourse2021.Lab05_01.Array.FileDetails
 
             string fileName = args[0];
 
-            FileStream stream = new FileStream(fileName, FileMode.Open);
-            StreamReader reader = new StreamReader(stream);
-
-            int size = (int)stream.Length;
-
-            char[] contents = new char[size];
-
-            for (int i = 0; i < size; i++)
+            using (FileStream stream = new FileStream(fileName, FileMode.Open))
             {
-                contents[i] = (char)reader.Read();
-            }
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    int size = (int)stream.Length;
 
-            foreach (char ch in contents)
-            {
-                Console.Write(ch);
+                    char[] contents = new char[size];
+
+                    for (int i = 0; i < size; i++)
+                    {
+                        contents[i] = (char)reader.Read();
+                    }
+
+                    foreach (char ch in contents)
+                    {
+                        Console.Write(ch);
+                    }
+                }
             }
-        }
+        }   
     }
 }
