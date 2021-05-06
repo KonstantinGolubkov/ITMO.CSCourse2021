@@ -8,6 +8,12 @@ namespace ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply
 {
     class MatrixMultiply
     {
+        static void Output(int[,] result)
+        {
+            Console.WriteLine("{0}   {1}", result[0, 0], result[0, 1]);
+            Console.WriteLine("{0}   {1}", result[1, 0], result[1, 1]);
+        }
+
         static void Main(string[] args)
         {
             int[,] a = new int[2, 2];
@@ -24,8 +30,7 @@ namespace ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply
             result[1, 0] = a[1, 0] * b[0, 0] + a[1, 1] * b[1, 0];
             result[1, 1] = a[1, 0] * b[0, 1] + a[1, 1] * b[1, 1];
 
-            Console.WriteLine("{0}   {1}", result[0, 0], result[0, 1]);
-            Console.WriteLine("{0}   {1}", result[1, 0], result[1, 1]);
+            MatrixMultiply.Output(result);
         }
     }
 }
