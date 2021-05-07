@@ -35,6 +35,12 @@ namespace ITMO.CSCourse2021.Lab06_03.Class.CA.UN.AddDepositAndWithdraw
             return nextAccNo++;
         }
 
+        public decimal Deposit(decimal amount)
+        {
+            accBal += amount;
+            return accBal;
+        }
+
         private long accNo;
         private decimal accBal;
         private AccountType accType;

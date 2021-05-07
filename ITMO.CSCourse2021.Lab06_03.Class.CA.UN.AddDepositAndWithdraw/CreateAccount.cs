@@ -12,8 +12,12 @@ namespace ITMO.CSCourse2021.Lab06_03.Class.CA.UN.AddDepositAndWithdraw
         {
             BankAccount berts = NewBankAccount();
             Write(berts);
+            TestDeposit(berts);
+            Write(berts);
 
             BankAccount freds = NewBankAccount();
+            Write(freds);
+            TestDeposit(freds);
             Write(freds);
         }
 
@@ -29,6 +33,13 @@ namespace ITMO.CSCourse2021.Lab06_03.Class.CA.UN.AddDepositAndWithdraw
             created.Populate(balance);
 
             return created;
+        }
+
+        public static void TestDeposit(BankAccount acc)
+        {
+            Console.Write("Enter amount to deposit: ");
+            decimal amount = decimal.Parse(Console.ReadLine());
+            acc.Deposit(amount);
         }
 
         static void Write(BankAccount toWrite)
