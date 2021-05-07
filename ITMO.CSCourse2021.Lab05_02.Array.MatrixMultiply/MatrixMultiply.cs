@@ -38,15 +38,13 @@ namespace ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply
         static void Main(string[] args)
         {
             int[,] a = new int[2, 2];
-            //a[0, 0] = 1; a[0, 1] = 2;
-            //a[1, 0] = 3; a[1, 1] = 4;
             Console.Write("Enter value a[0,0]\t");
             string s00 = Console.ReadLine();
             a[0, 0] = int.Parse(s00);
-            Console.Write("Enter value a[0,0]\t");
+            Console.Write("Enter value a[0,1]\t");
             string s01 = Console.ReadLine();
             a[0, 1] = int.Parse(s01);
-            Console.Write("Enter value a[0,1]\t");
+            Console.Write("Enter value a[1,0]\t");
             string s10 = Console.ReadLine();
             a[1, 0] = int.Parse(s10);
             Console.Write("Enter value a[1,1]\t");
@@ -54,15 +52,13 @@ namespace ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply
             a[1, 1] = int.Parse(s11);
 
             int[,] b = new int[2, 2];
-            //b[0, 0] = 5; b[0, 1] = 6;
-            //b[1, 0] = 7; b[1, 1] = 8;
             Console.Write("Enter value b[0,0]\t");
             string t00 = Console.ReadLine();
             b[0, 0] = int.Parse(t00);
-            Console.Write("Enter value b[0,0]\t");
+            Console.Write("Enter value b[0,1]\t");
             string t01 = Console.ReadLine();
             b[0, 1] = int.Parse(t01);
-            Console.Write("Enter value b[0,1]\t");
+            Console.Write("Enter value b[1,0]\t");
             string t10 = Console.ReadLine();
             b[1, 0] = int.Parse(t10);
             Console.Write("Enter value b[1,1]\t");
