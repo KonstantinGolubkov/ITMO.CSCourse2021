@@ -27,18 +27,20 @@ namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
             Console.Write("Enter the account balance! : ");
             decimal balance = decimal.Parse(Console.ReadLine());
 
-            created.accNo = number;
-            created.accBal = balance;
-            created.accType = AccountType.Checking;
+            //created.accNo = number;
+            //created.accBal = balance;
+            //created.accType = AccountType.Checking;
+
+            created.Populate(number, balance);
 
             return created;
         }
 
         static void Write(BankAccount toWrite)
         {
-            Console.WriteLine("Account number is {0}", toWrite.accNo);
-            Console.WriteLine("Account balance is {0}", toWrite.accBal);
-            Console.WriteLine("Account type is {0}", toWrite.accType.ToString());
+            Console.WriteLine("Account number is {0}", toWrite.Number());
+            Console.WriteLine("Account balance is {0}", toWrite.Balance());
+            Console.WriteLine("Account type is {0}", toWrite.Type());
         }
 
     }
