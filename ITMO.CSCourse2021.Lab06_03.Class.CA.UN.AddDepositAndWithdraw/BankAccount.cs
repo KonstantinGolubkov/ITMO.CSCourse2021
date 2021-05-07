@@ -41,6 +41,16 @@ namespace ITMO.CSCourse2021.Lab06_03.Class.CA.UN.AddDepositAndWithdraw
             return accBal;
         }
 
+        public bool Withdraw(decimal amount)
+        {
+            bool sufficientFunds = accBal >= amount;
+            if (sufficientFunds)
+            {
+                accBal -= amount;
+            }
+            return sufficientFunds;
+        }
+
         private long accNo;
         private decimal accBal;
         private AccountType accType;
