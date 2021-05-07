@@ -21,15 +21,13 @@ namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
         {
             BankAccount created = new BankAccount();
 
-            Console.Write("Enter the account number   : ");
-            long number = long.Parse(Console.ReadLine());
+            //Console.Write("Enter the account number   : ");
+            //long number = long.Parse(Console.ReadLine());
+            long number = BankAccount.NextNumber();
+
 
             Console.Write("Enter the account balance! : ");
             decimal balance = decimal.Parse(Console.ReadLine());
-
-            //created.accNo = number;
-            //created.accBal = balance;
-            //created.accType = AccountType.Checking;
 
             created.Populate(number, balance);
 

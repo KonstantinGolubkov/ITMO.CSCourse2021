@@ -30,8 +30,15 @@ namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
             return accType.ToString();
         }
 
+        public static long NextNumber()
+        {
+            return nextAccNo++;
+        }
+
         private long accNo;
         private decimal accBal;
         private AccountType accType;
+
+        private static long nextAccNo = 123;
     }
 }
