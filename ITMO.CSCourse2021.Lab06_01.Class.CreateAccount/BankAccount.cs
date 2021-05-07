@@ -8,9 +8,9 @@ namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
 {
     class BankAccount
     {
-        public void Populate(long number, decimal balance)
+        public void Populate(decimal balance)
         {
-            accNo = number;
+            accNo = BankAccount.NextNumber();
             accBal = balance;
             accType = AccountType.Checking;
         }
@@ -30,7 +30,7 @@ namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
             return accType.ToString();
         }
 
-        public static long NextNumber()
+        private static long NextNumber()
         {
             return nextAccNo++;
         }
