@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab06_01.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab06_02.Class.CreateAccount.UniqueNumbers", "ITMO.CSCourse2021.Lab06_02.Class.CreateAccount.UniqueNumbers\ITMO.CSCourse2021.Lab06_02.Class.CreateAccount.UniqueNumbers.csproj", "{32C85BF6-FD1D-4707-BE0C-C92A95FEBE22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab06_03.Class.CA.UN.AddDepositAndWithdraw", "ITMO.CSCourse2021.Lab06_03.Class.CA.UN.AddDepositAndWithdraw\ITMO.CSCourse2021.Lab06_03.Class.CA.UN.AddDepositAndWithdraw.csproj", "{A1FC197F-35F1-4FCE-A95A-D8754E8FF921}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{32C85BF6-FD1D-4707-BE0C-C92A95FEBE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32C85BF6-FD1D-4707-BE0C-C92A95FEBE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32C85BF6-FD1D-4707-BE0C-C92A95FEBE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FC197F-35F1-4FCE-A95A-D8754E8FF921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FC197F-35F1-4FCE-A95A-D8754E8FF921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FC197F-35F1-4FCE-A95A-D8754E8FF921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FC197F-35F1-4FCE-A95A-D8754E8FF921}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
