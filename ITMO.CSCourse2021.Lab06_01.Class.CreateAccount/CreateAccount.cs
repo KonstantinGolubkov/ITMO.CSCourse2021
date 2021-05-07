@@ -19,7 +19,7 @@ namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
 
         static BankAccount NewBankAccount()
         {
-            BankAccount created;
+            BankAccount created = new BankAccount();
 
             Console.Write("Enter the account number   : ");
             long number = long.Parse(Console.ReadLine());

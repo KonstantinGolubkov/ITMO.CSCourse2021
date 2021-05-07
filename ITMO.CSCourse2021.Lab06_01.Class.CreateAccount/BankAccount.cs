@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
 {
-    struct BankAccount
+    class BankAccount
     {
         public long accNo;
         public decimal accBal;
