@@ -25,9 +25,9 @@ namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
             return accBal;
         }
 
-        public AccountType Type()
+        public string Type()
         {
-            return accType;
+            return accType.ToString();
         }
 
         private long accNo;
