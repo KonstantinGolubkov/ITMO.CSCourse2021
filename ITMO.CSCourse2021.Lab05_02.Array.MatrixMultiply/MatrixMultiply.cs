@@ -11,10 +11,19 @@ namespace ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply
         static int[,] Multiply(int[,] a, int[,] b)
         {
             int[,] result = new int[2, 2];
-            result[0, 0] = a[0, 0] * b[0, 0] + a[0, 1] * b[1, 0];
-            result[0, 1] = a[0, 0] * b[0, 1] + a[0, 1] * b[1, 1];
-            result[1, 0] = a[1, 0] * b[0, 0] + a[1, 1] * b[1, 0];
-            result[1, 1] = a[1, 0] * b[0, 1] + a[1, 1] * b[1, 1];
+            //result[0, 0] = a[0, 0] * b[0, 0] + a[0, 1] * b[1, 0];
+            //result[0, 1] = a[0, 0] * b[0, 1] + a[0, 1] * b[1, 1];
+            //result[1, 0] = a[1, 0] * b[0, 0] + a[1, 1] * b[1, 0];
+            //result[1, 1] = a[1, 0] * b[0, 1] + a[1, 1] * b[1, 1];
+
+            for (int r = 0; r < 2; r++)
+            {
+                for (int c = 0; c < 2; c++)
+                {
+                    result[r, c] += a[r, 0] * b[0, c] + a[r, 1] * b[1, c];
+                }
+            }
+
             return result;
         }
 
@@ -41,10 +50,6 @@ namespace ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply
             b[1, 0] = 7; b[1, 1] = 8;
 
             int[,] result = new int[2, 2];
-            //result[0, 0] = a[0, 0] * b[0, 0] + a[0, 1] * b[1, 0];
-            //result[0, 1] = a[0, 0] * b[0, 1] + a[0, 1] * b[1, 1];
-            //result[1, 0] = a[1, 0] * b[0, 0] + a[1, 1] * b[1, 0];
-            //result[1, 1] = a[1, 0] * b[0, 1] + a[1, 1] * b[1, 1];
 
             result = MatrixMultiply.Multiply(a, b);
 
