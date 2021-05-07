@@ -10,18 +10,15 @@ namespace ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply
     {
         static void Input(int[,] dst)
         {
-            Console.Write("Enter the value of the matrix [0,0]\t");
-            string s00 = Console.ReadLine();
-            dst[0, 0] = int.Parse(s00);
-            Console.Write("Enter the value of the matrix [0,1]\t");
-            string s01 = Console.ReadLine();
-            dst[0, 1] = int.Parse(s01);
-            Console.Write("Enter the value of the matrix [1,0]\t");
-            string s10 = Console.ReadLine();
-            dst[1, 0] = int.Parse(s10);
-            Console.Write("Enter the value of the matrix [1,1]\t");
-            string s11 = Console.ReadLine();
-            dst[1, 1] = int.Parse(s11);
+            for (int r = 0; r < 2; r++)
+            {
+                for (int c = 0; c < 2; c++)
+                {
+                    Console.Write("Enter the value of the matrix [{0},{1}]:\t", r, c);
+                    string s = Console.ReadLine();
+                    dst[r, c] = int.Parse(s);
+                }
+            }
 
             Console.WriteLine();
         }
