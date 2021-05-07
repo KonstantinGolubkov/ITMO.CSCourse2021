@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ITMO.CSCourse2021.Lab06_01.Class.CreateAccount
 {
-    class Program
+    struct BankAccount
     {
-        static void Main(string[] args)
-        {
-        }
+        public long accNo;
+        public decimal accBal;
+        public AccountType accType;
     }
 }
