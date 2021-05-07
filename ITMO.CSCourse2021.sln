@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab05_01.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply", "ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply\ITMO.CSCourse2021.Lab05_02.Array.MatrixMultiply.csproj", "{C060A64D-ECE0-408E-B305-60ADDE11B095}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab06_01.Class.CreateAccount", "ITMO.CSCourse2021.Lab06_01.Class.CreateAccount\ITMO.CSCourse2021.Lab06_01.Class.CreateAccount.csproj", "{99C78396-878C-42DA-948F-E4C22993BBC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{C060A64D-ECE0-408E-B305-60ADDE11B095}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C060A64D-ECE0-408E-B305-60ADDE11B095}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C060A64D-ECE0-408E-B305-60ADDE11B095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C78396-878C-42DA-948F-E4C22993BBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C78396-878C-42DA-948F-E4C22993BBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C78396-878C-42DA-948F-E4C22993BBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C78396-878C-42DA-948F-E4C22993BBC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
