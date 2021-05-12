@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace ITMO.CSCourse2021.Lab07_01.RefTypes.BankAccount.TransferFrom
 {
-    class Program
+    enum AccountType
     {
-        static void Main(string[] args)
-        {
-        }
+        Checking,
+        Deposit
     }
 }
