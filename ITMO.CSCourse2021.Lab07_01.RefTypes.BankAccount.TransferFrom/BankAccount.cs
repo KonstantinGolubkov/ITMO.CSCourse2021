@@ -14,6 +14,12 @@ namespace ITMO.CSCourse2021.Lab07_01.RefTypes.BankAccount.TransferFrom
 
         private static long nextAccNo = 123;
 
+        public void TransferFrom(BankAccount accFrom, decimal amount)
+        {
+            if (accFrom.Withdraw(amount))
+                this.Deposit(amount);
+        }
+
         public void Populate(decimal balance)
         {
             accNo = BankAccount.NextNumber();
