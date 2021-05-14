@@ -23,18 +23,30 @@ namespace ITMO.CSCourse2021.Lab07_03.RefTypes.CopyFileUpper
             sTo = Console.ReadLine();
 
             Console.WriteLine("Copy from {0} to {1}", sFrom, sTo);
-
-            srFrom = new StreamReader(sFrom);       //create a new object of type StreamReader
-            swTo = new StreamWriter(sTo);           //create a new object of type StreamWriter
-
-            while (srFrom.Peek() != -1)                 //StreamReader.Peek method from System.IO
+            try
             {
-                string sBuffer = srFrom.ReadLine();     //StreamReader.ReadLine method from System.IO
-                sBuffer = sBuffer.ToUpper();            //String.ToUpper method from System
-                swTo.WriteLine(sBuffer);                //StreamWriter.WriteLine method from System.IO
+            
+                srFrom = new StreamReader(sFrom);       //create a new object of type StreamReader
+                swTo = new StreamWriter(sTo);           //create a new object of type StreamWriter
+
+                while (srFrom.Peek() != -1)                 //StreamReader.Peek method from System.IO
+                {
+                    string sBuffer = srFrom.ReadLine();     //StreamReader.ReadLine method from System.IO
+                    sBuffer = sBuffer.ToUpper();            //String.ToUpper method from System
+                    swTo.WriteLine(sBuffer);                //StreamWriter.WriteLine method from System.IO
+                }
+                srFrom.Close();                         //close input stream
+                swTo.Close();                           //close output stream
             }
-            srFrom.Close();                         //close input stream
-            swTo.Close();                           //close output stream
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("Input file not found");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Unexpected exception");
+                Console.WriteLine(e.ToString());
+            }
 
         }
     }
