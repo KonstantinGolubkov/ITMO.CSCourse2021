@@ -8,6 +8,7 @@ using System.IO;
 namespace ITMO.CSCourse2021.Lab07_03.RefTypes.CopyFileUpper
 {
     // Class to create an upper case copy of a file
+    // Test programm run from command line
 
     class CopyFileUpper
     {
