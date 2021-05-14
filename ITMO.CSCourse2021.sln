@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab07_01.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab07_02.RefTypes.Utils.ReverseString", "ITMO.CSCourse2021.Lab07_02.RefTypes.Utils.ReverseString\ITMO.CSCourse2021.Lab07_02.RefTypes.Utils.ReverseString.csproj", "{EC8B26A4-4649-4076-BB15-17F3B5745027}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab07_03.RefTypes.CopyFileUpper", "ITMO.CSCourse2021.Lab07_03.RefTypes.CopyFileUpper\ITMO.CSCourse2021.Lab07_03.RefTypes.CopyFileUpper.csproj", "{EE585C0B-114E-4003-8566-9310BD447F07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{EC8B26A4-4649-4076-BB15-17F3B5745027}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC8B26A4-4649-4076-BB15-17F3B5745027}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC8B26A4-4649-4076-BB15-17F3B5745027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE585C0B-114E-4003-8566-9310BD447F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE585C0B-114E-4003-8566-9310BD447F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE585C0B-114E-4003-8566-9310BD447F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE585C0B-114E-4003-8566-9310BD447F07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
