@@ -8,6 +8,20 @@ namespace ITMO.CSCourse2021.Lab07_02.RefTypes.Utils.ReverseString
 {
     class Utils
     {
+        // Return a string whose characters will be in reverse order
+
+        public static void Reverse(ref string s)
+        {
+            string sRev = "";
+
+            for (int k = s.Length - 1; k >= 0 ; k--)
+            {
+                sRev = sRev + s[k];
+            }
+            s = sRev;       //Return result to caller
+        }
+
+
         // Return the greater of two integer values
 
         public static int Greater(int a, int b)
