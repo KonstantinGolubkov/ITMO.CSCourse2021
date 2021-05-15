@@ -8,6 +8,16 @@ namespace ITMO.CSCourse2021.Lab07_04.RefTyp.IsItFormattable_Interface
 {
     class Utils
     {
+        //Checking whether the object has an IFormattable interface or not
+
+        public static bool IsItFormattable(object x)
+        {
+            if (x is IFormattable)
+                return true;
+            else
+                return false;
+        }
+
         // Return a string whose characters will be in reverse order
 
         public static void Reverse(ref string s)
