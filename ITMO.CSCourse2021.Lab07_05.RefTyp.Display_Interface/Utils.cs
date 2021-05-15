@@ -8,6 +8,17 @@ namespace ITMO.CSCourse2021.Lab07_05.RefTyp.Display_Interface
 {
     class Utils
     {
+        public static void Display(object item)
+        {
+            IPrintable ip;
+            ip = (item as IPrintable);
+
+            if (ip != null)
+                ip.Print();
+            else
+                Console.WriteLine(item.ToString());
+        }
+
         //Checking whether the object has an IFormattable interface or not
 
         public static bool IsItFormattable(object x)
