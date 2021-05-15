@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab07_03.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab07_04.RefTyp.IsItFormattable_Interface", "ITMO.CSCourse2021.Lab07_04.RefTyp.IsItFormattable_Interface\ITMO.CSCourse2021.Lab07_04.RefTyp.IsItFormattable_Interface.csproj", "{1F5FC249-8334-4F26-822B-385348AD67AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.CSCourse2021.Lab07_05.RefTyp.Display_Interface", "ITMO.CSCourse2021.Lab07_05.RefTyp.Display_Interface\ITMO.CSCourse2021.Lab07_05.RefTyp.Display_Interface.csproj", "{8C510D20-032E-4A67-A16C-5B08802C4160}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{1F5FC249-8334-4F26-822B-385348AD67AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F5FC249-8334-4F26-822B-385348AD67AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F5FC249-8334-4F26-822B-385348AD67AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C510D20-032E-4A67-A16C-5B08802C4160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C510D20-032E-4A67-A16C-5B08802C4160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C510D20-032E-4A67-A16C-5B08802C4160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C510D20-032E-4A67-A16C-5B08802C4160}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
