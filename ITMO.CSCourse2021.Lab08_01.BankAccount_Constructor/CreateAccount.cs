@@ -10,55 +10,70 @@ namespace ITMO.CSCourse2021.Lab08_01.BankAccount_Constructor
     {
         static void Main()
         {
-            BankAccount berts = NewBankAccount();
-            Write(berts);
-            TestDeposit(berts);
-            Write(berts);
-            TestWithdraw(berts);
-            Write(berts);
+            BankAccount acc1, acc2, acc3, acc4;
+            acc1 = new BankAccount();
+            acc2 = new BankAccount(AccountType.Deposit);
+            acc3 = new BankAccount(100);
+            acc4 = new BankAccount(AccountType.Deposit, 500);
 
-            BankAccount freds = NewBankAccount();
-            Write(freds);
-            TestDeposit(freds);
-            Write(freds);
-            TestWithdraw(freds);
-            Write(freds);
-        }
+            Write(acc1);
+            Write(acc2);
+            Write(acc3);
+            Write(acc4);
 
-        static BankAccount NewBankAccount()
-        {
-            BankAccount created = new BankAccount();
 
-            Console.Write("Enter the account balance! : ");
-            decimal balance = decimal.Parse(Console.ReadLine());
+            //static void Main()
+            //{
+            //    BankAccount berts = NewBankAccount();
+            //    Write(berts);
+            //    TestDeposit(berts);
+            //    Write(berts);
+            //    TestWithdraw(berts);
+            //    Write(berts);
 
-            created.Populate(balance);
+            //    BankAccount freds = NewBankAccount();
+            //    Write(freds);
+            //    TestDeposit(freds);
+            //    Write(freds);
+            //    TestWithdraw(freds);
+            //    Write(freds);
+            //}
 
-            return created;
-        }
+            //static BankAccount NewBankAccount()
+            //{
+            //    BankAccount created = new BankAccount();
 
-        public static void TestDeposit(BankAccount acc)
-        {
-            Console.Write("Enter amount to deposit: ");
-            decimal amount = decimal.Parse(Console.ReadLine());
-            acc.Deposit(amount);
-        }
+            //    Console.Write("Enter the account balance! : ");
+            //    decimal balance = decimal.Parse(Console.ReadLine());
 
-        public static void TestWithdraw(BankAccount acc)
-        {
-            Console.Write("Enter amount to withdraw: ");
-            decimal amount = decimal.Parse(Console.ReadLine());
-            if (!acc.Withdraw(amount))
+            //    created.Populate(balance);
+
+            //    return created;
+            //}
+
+            //public static void TestDeposit(BankAccount acc)
+            //{
+            //    Console.Write("Enter amount to deposit: ");
+            //    decimal amount = decimal.Parse(Console.ReadLine());
+            //    acc.Deposit(amount);
+            //}
+
+            //public static void TestWithdraw(BankAccount acc)
+            //{
+            //    Console.Write("Enter amount to withdraw: ");
+            //    decimal amount = decimal.Parse(Console.ReadLine());
+            //    if (!acc.Withdraw(amount))
+            //    {
+            //        Console.WriteLine("Insufficient funds.");
+            //    }
+            //}
+
+            void Write(BankAccount toWrite)
             {
-                Console.WriteLine("Insufficient funds.");
+                Console.WriteLine("Account number is {0}", toWrite.Number());
+                Console.WriteLine("Account balance is {0}", toWrite.Balance());
+                Console.WriteLine("Account type is {0}", toWrite.Type());
             }
-        }
-
-        static void Write(BankAccount toWrite)
-        {
-            Console.WriteLine("Account number is {0}", toWrite.Number());
-            Console.WriteLine("Account balance is {0}", toWrite.Balance());
-            Console.WriteLine("Account type is {0}", toWrite.Type());
         }
     }
 }
