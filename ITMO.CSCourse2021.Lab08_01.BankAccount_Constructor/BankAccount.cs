@@ -20,12 +20,46 @@ namespace ITMO.CSCourse2021.Lab08_01.BankAccount_Constructor
                 this.Deposit(amount);
         }
 
-        public void Populate(decimal balance)
+        //public void Populate(decimal balance)
+        //{
+        //    accNo = BankAccount.NextNumber();
+        //    accBal = balance;
+        //    accType = AccountType.Checking;
+        //}
+
+        //Add constructors BankAccount(), BankAccount(AccountType aType),
+        //BankAccount(decimal aBal), BankAccount(AccountType aType, decimal aBal),
+
+        public BankAccount()
         {
             accNo = BankAccount.NextNumber();
-            accBal = balance;
+            accBal = 0;
             accType = AccountType.Checking;
         }
+
+        public BankAccount(AccountType aType)
+        {
+            accNo = BankAccount.NextNumber();
+            accBal = 0;
+            accType = aType;
+        }
+
+        public BankAccount(decimal aBal)
+        {
+            accNo = BankAccount.NextNumber();
+            accBal = aBal;
+            accType = AccountType.Checking;
+        }
+
+        public BankAccount(AccountType aType, decimal aBal)
+        {
+            accNo = BankAccount.NextNumber();
+            accBal = aBal;
+            accType = aType;
+        }
+
+        //End of adding constructors
+
 
         public long Number()
         {
