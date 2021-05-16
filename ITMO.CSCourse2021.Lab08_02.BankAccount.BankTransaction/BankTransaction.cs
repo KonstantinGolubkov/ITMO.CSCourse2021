@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
-
-class BankTransaction
+namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
 {
-    private readonly decimal amount;
-    private readonly DateTime when;
-
-    public decimal Amount()
+    class BankTransaction
     {
-        return amount;
-    }
+        private readonly decimal amount;
+        private readonly DateTime when;
 
-    public DateTime When()
-    {
-        return when;
-    }
+        public decimal Amount()
+        {
+            return amount;
+        }
 
-    public BankTransaction(decimal tranAmount)
-    {
-        amount = tranAmount;
-        when = DateTime.Now;
+        public DateTime When()
+        {
+            return when;
+        }
+
+        public BankTransaction(decimal tranAmount)
+        {
+            amount = tranAmount;
+            when = DateTime.Now;
+        }
     }
 }

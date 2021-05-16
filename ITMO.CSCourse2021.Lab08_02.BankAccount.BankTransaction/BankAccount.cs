@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
 {
     class BankAccount
     {
+        private Queue tranQueue = new Queue();
+
         private long accNo;
         private decimal accBal;
         private AccountType accType;
@@ -84,6 +87,8 @@ namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
         public decimal Deposit(decimal amount)
         {
             accBal += amount;
+            BankTransaction tran = new BankTransaction(amount);
+            tranQueue.Enqueue(tran);
             return accBal;
         }
 
@@ -93,6 +98,8 @@ namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
             if (sufficientFunds)
             {
                 accBal -= amount;
+                BankTransaction tran = new BankTransaction(-amount);
+                tranQueue.Enqueue(tran);
             }
             return sufficientFunds;
         }
