@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
 {
-    class Program
+    enum AccountType
     {
-        static void Main(string[] args)
-        {
-        }
+        Checking,
+        Deposit
     }
 }
