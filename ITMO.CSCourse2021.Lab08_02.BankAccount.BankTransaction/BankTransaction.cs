@@ -19,4 +19,10 @@ class BankTransaction
     {
         return when;
     }
+
+    public BankTransaction(decimal tranAmount)
+    {
+        amount = tranAmount;
+        when = DateTime.Now;
+    }
 }
