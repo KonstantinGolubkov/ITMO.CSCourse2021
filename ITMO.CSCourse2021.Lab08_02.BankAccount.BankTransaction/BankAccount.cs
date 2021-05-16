@@ -17,6 +17,11 @@ namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
 
         private static long nextAccNo = 123;
 
+        public Queue Transactions()
+        {
+            return tranQueue;
+        }
+
         public void TransferFrom(BankAccount accFrom, decimal amount)
         {
             if (accFrom.Withdraw(amount))
