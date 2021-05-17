@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
 {
@@ -10,77 +11,63 @@ namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
     {
         static void Main()
         {
-            BankAccount acc1, acc2, acc3, acc4;
-            acc1 = new BankAccount();
-            acc2 = new BankAccount(AccountType.Deposit);
-            acc3 = new BankAccount(100);
-            acc4 = new BankAccount(AccountType.Deposit, 500);
-
+            BankAccount acc1 = new BankAccount();
             Write(acc1);
+            TestDeposit(acc1);
+            Write(acc1);
+            TestWithdraw(acc1);
+
+            BankAccount acc2 = new BankAccount(AccountType.Deposit);
             Write(acc2);
+            TestDeposit(acc2);
+            Write(acc2);
+            TestWithdraw(acc2);
+            Write(acc2);
+
+            BankAccount acc3 = new BankAccount(100);
             Write(acc3);
+            TestDeposit(acc3);
+            Write(acc3);
+            TestWithdraw(acc3);
+            Write(acc3);
+
+            BankAccount acc4 = new BankAccount(AccountType.Deposit, 500);
             Write(acc4);
+            TestDeposit(acc4);
+            Write(acc4);
+            TestWithdraw(acc4);
+            Write(acc4);
+        }
 
+        public static void TestDeposit(BankAccount acc)
+        {
+            Console.Write("Enter amount to deposit: ");
+            decimal amount = decimal.Parse(Console.ReadLine());
+            acc.Deposit(amount);
+        }
 
-            //static void Main()
-            //{
-            //    BankAccount berts = NewBankAccount();
-            //    Write(berts);
-            //    TestDeposit(berts);
-            //    Write(berts);
-            //    TestWithdraw(berts);
-            //    Write(berts);
-
-            //    BankAccount freds = NewBankAccount();
-            //    Write(freds);
-            //    TestDeposit(freds);
-            //    Write(freds);
-            //    TestWithdraw(freds);
-            //    Write(freds);
-            //}
-
-            //static BankAccount NewBankAccount()
-            //{
-            //    BankAccount created = new BankAccount();
-
-            //    Console.Write("Enter the account balance! : ");
-            //    decimal balance = decimal.Parse(Console.ReadLine());
-
-            //    created.Populate(balance);
-
-            //    return created;
-            //}
-
-            //public static void TestDeposit(BankAccount acc)
-            //{
-            //    Console.Write("Enter amount to deposit: ");
-            //    decimal amount = decimal.Parse(Console.ReadLine());
-            //    acc.Deposit(amount);
-            //}
-
-            //public static void TestWithdraw(BankAccount acc)
-            //{
-            //    Console.Write("Enter amount to withdraw: ");
-            //    decimal amount = decimal.Parse(Console.ReadLine());
-            //    if (!acc.Withdraw(amount))
-            //    {
-            //        Console.WriteLine("Insufficient funds.");
-            //    }
-            //}
-
-            void Write(BankAccount toWrite)
+        public static void TestWithdraw(BankAccount acc)
+        {
+            Console.Write("Enter amount to withdraw: ");
+            decimal amount = decimal.Parse(Console.ReadLine());
+            if (!acc.Withdraw(amount))
             {
-                Console.WriteLine("Account number is {0}", toWrite.Number());
-                Console.WriteLine("Account balance is {0}", toWrite.Balance());
-                Console.WriteLine("Account type is {0}", toWrite.Type());
-
-                Console.WriteLine("Transactions:");
-                foreach (BankTransaction tran in BankTransaction())
-                {
-                    Console.WriteLine("Date/Time: {0}\tAmount: {1}", tran.When(), tran.Amount());
-                }
-                Console.WriteLine();
+                Console.WriteLine("Insufficient funds.");
             }
         }
+
+        static void Write(BankAccount acc)
+        {
+            Console.WriteLine("Account number is {0}", acc.Number());
+            Console.WriteLine("Account balance is {0}", acc.Balance());
+            Console.WriteLine("Account type is {0}", acc.Type());
+
+            Console.WriteLine("Transactions:");
+            foreach (BankTransaction tran in acc.Transactions())
+            {
+                Console.WriteLine("Date/Time: {0}\tAmount: {1}", tran.When(), tran.Amount());
+            }
+            Console.WriteLine();
+        }        
     }
 }
