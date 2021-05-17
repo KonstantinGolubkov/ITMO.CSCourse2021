@@ -10,21 +10,20 @@ namespace ITMO.CSCourse2021.Lab08_03.BankAccount.Dispose
     {
         static void Main()
         {
-            BankAccount acc1;
+            using (BankAccount acc1 = new BankAccount())
+            {
+                acc1.Deposit(100);
+                acc1.Withdraw(50);
+                acc1.Deposit(75);
+                acc1.Withdraw(50);
+                acc1.Withdraw(30);
+                acc1.Deposit(40);
+                acc1.Deposit(200);
+                acc1.Withdraw(250);
+                acc1.Deposit(25);
 
-            acc1 = new BankAccount();
-
-            acc1.Deposit(100);
-            acc1.Withdraw(50);
-            acc1.Deposit(75);
-            acc1.Withdraw(50);
-            acc1.Withdraw(30);
-            acc1.Deposit(40);
-            acc1.Deposit(200);
-            acc1.Withdraw(250);
-            acc1.Deposit(25);
-
-            Write(acc1);
+                Write(acc1);
+            }
         }
 
         static void Write(BankAccount acc)
