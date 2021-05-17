@@ -22,22 +22,6 @@ namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
             return tranQueue;
         }
 
-        public void TransferFrom(BankAccount accFrom, decimal amount)
-        {
-            if (accFrom.Withdraw(amount))
-                this.Deposit(amount);
-        }
-
-        //public void Populate(decimal balance)
-        //{
-        //    accNo = BankAccount.NextNumber();
-        //    accBal = balance;
-        //    accType = AccountType.Checking;
-        //}
-
-        //Add constructors BankAccount(), BankAccount(AccountType aType),
-        //BankAccount(decimal aBal), BankAccount(AccountType aType, decimal aBal),
-
         public BankAccount()
         {
             accNo = BankAccount.NextNumber();
@@ -65,9 +49,6 @@ namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
             accBal = aBal;
             accType = aType;
         }
-
-        //End of adding constructors
-
 
         public long Number()
         {
