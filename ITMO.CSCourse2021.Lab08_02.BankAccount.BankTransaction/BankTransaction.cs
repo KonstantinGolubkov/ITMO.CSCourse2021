@@ -5,27 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
+class BankTransaction
 {
-    class BankTransaction
+    private readonly decimal amount;
+    private readonly DateTime when;
+
+    public decimal Amount()
     {
-        private readonly decimal amount;
-        private readonly DateTime when;
+        return amount;
+    }
 
-        public decimal Amount()
-        {
-            return amount;
-        }
+    public DateTime When()
+    {
+        return when;
+    }
 
-        public DateTime When()
-        {
-            return when;
-        }
-
-        public BankTransaction(decimal tranAmount)
-        {
-            amount = tranAmount;
-            when = DateTime.Now;
-        }
+    public BankTransaction(decimal tranAmount)
+    {
+        amount = tranAmount;
+        when = DateTime.Now;
     }
 }

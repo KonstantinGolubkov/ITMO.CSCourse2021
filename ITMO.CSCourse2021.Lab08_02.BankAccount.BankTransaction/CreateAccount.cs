@@ -73,6 +73,13 @@ namespace ITMO.CSCourse2021.Lab08_02.BankAccount.BankTransaction
                 Console.WriteLine("Account number is {0}", toWrite.Number());
                 Console.WriteLine("Account balance is {0}", toWrite.Balance());
                 Console.WriteLine("Account type is {0}", toWrite.Type());
+
+                Console.WriteLine("Transactions:");
+                foreach (BankTransaction tran in BankTransaction())
+                {
+                    Console.WriteLine("Date/Time: {0}\tAmount: {1}", tran.When(), tran.Amount());
+                }
+                Console.WriteLine();
             }
         }
     }
