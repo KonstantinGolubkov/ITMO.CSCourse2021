@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.IO;
 
 namespace ITMO.CSCourse2021.Lab08_03.BankAccount.Dispose
 {
-    class BankAccount
+    sealed class BankAccount : IDisposable
     {
+        bool disposed = false;
+
         private Queue tranQueue = new Queue();
 
         private long accNo;
@@ -16,6 +19,30 @@ namespace ITMO.CSCourse2021.Lab08_03.BankAccount.Dispose
         private AccountType accType;
 
         private static long nextAccNo = 123;
+
+        public void Dispose()
+        {
+            if (!disposed)
+            {
+                StreamWriter swFile = File.AppendText("Transactions.Dat");
+                swFile.WriteLine("Account number is {0}", accNo);
+                swFile.WriteLine("Account balance is {0}", accBal);
+                swFile.WriteLine("Account type is {0}", accType);
+                swFile.WriteLine("Transactions:");
+                foreach (BankTransaction tran in tranQueue)
+                {
+                    swFile.WriteLine("Date/Time: {0}\tAmount:{1}", tran.When(), tran.Amount());
+                }
+                swFile.Close();
+                disposed = true;
+                GC.SuppressFinalize(this);
+            }
+        }
+
+        ~BankAccount()
+        {
+            Dispose();
+        }
 
         public Queue Transactions()
         {
